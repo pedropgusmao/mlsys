@@ -17,7 +17,7 @@ With Flower we can obtain metrics that wouldn't be possible to get from simulati
 The figure above shows two FL experiments using two NVIDIA-Jetson devices as clients. Both experiments train a ResNet18 on CIFAR-10 for 5 rounds. We run this experiment twice: first, using the high performance mode available on each device (see blue and oragne lines); and a lower power mode (purple and green lines). The power monitoring was done by running on a parallel process the `tegrastats` utility function available on these devices.
 
 
-We report below the average time and total power consumption (on-device training+communication+aggregation) per round for each device in eacho power configuration.
+We report below the average time and total power consumption (on-device training+communication+aggregation) per round for each device in each power configuration.
 
 ### High Power Consumption mode
 
@@ -43,7 +43,7 @@ We report below the average time and total power consumption (on-device training
 
 ###  CIFAR10 Training times on Raspberry Pi devices
 
-Using the same setup as before, we ran a similar experiment on two different generations of Raspberry Pi's (3 and 4) to measure the speed-up in processing time.
+Using the same setup as the above, we ran a similar experiment on two different generations of Raspberry Pi's (3 and 4), using a batch size of 64 samples, to measure the speed-up in processing time accross different generations.
 This example shows Flower's capability of distinguishing between on-device compute time and communication+aggregation times.
 
 ```
