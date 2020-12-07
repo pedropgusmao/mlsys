@@ -17,3 +17,16 @@ With Flower we can obtain metrics that wouldn't be possible to get from simulati
 The figure above shows two FL experiments using two NVIDIA-Jetson devices as clients. Both experiments train a ResNet18 on CIFAR-10 for 5 rounds. We run this experiment twice: first, using the high performance mode available on each device (see blue and oragne lines); and a lower power mode (purple and green lines). The power monitoring was done by running on a parallel process the `tegrastats` utility function available on these devices.
 
 <<Takeaways from the figure>>
+
+
+## Federated Learning with 10k clients and 1k
+
+As requested in the reviews, we further show Flower's scalability by training our network on the CIFAR10 dataset using **10 thousand** devices with **1 thousand** participating clients in each run. The Figures below show the accuracies and losses obtained after each trained round.
+
+![image](media/flwr_cifar10_10k_accuracy.png)
+
+![image](media/flwr_cifar10_10k_loss.png)
+
+Each round consisted of one epoch and *FedAvg* was used to generate the results.  
+
+
