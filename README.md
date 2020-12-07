@@ -17,7 +17,11 @@ With Flower we can obtain metrics that wouldn't be possible to get from simulati
 The figure above shows two FL experiments using two NVIDIA-Jetson devices as clients. Both experiments train a ResNet18 on CIFAR-10 for 5 rounds. We run this experiment twice: first, using the high performance mode available on each device (see blue and oragne lines); and a lower power mode (purple and green lines). The power monitoring was done by running on a parallel process the `tegrastats` utility function available on these devices.
 
 
+We report below the average time and total power consumption (on-device training+communication+aggregation) per round for each device in eacho power configuration.
+
 ### High Power Consumption mode
+
+
 ```
 +-------------------------+--------------------------------+---------------+------------------+
 |         Device          | Train time per epoch (s/epoch) | Avg.(s/epoch) | Total Energy (KJ)|
@@ -37,15 +41,29 @@ The figure above shows two FL experiments using two NVIDIA-Jetson devices as cli
 +--------------------------+--------------------------------+---------------+------------------+
 ```
 
+###  CIFAR10 Training times on Raspberry Pi devices
+
+Using the same setup as before, we ran a similar experiment on two different generations of Raspberry Pi's (3 and 4) to measure the speed-up in processing time.
+This example shows Flower's capability of distinguishing between on-device compute time and communication+aggregation times.
+
+```
++----------------+------------------------------------------+-----------------+
+|     Device     | Average compute time per epoch (s/epoch) | Comm.+Aggr. (s) |
++----------------+------------------------------------------+-----------------+
+| Raspberry Pi 3 |                                      298 |               6 |
+| Raspberry Pi 4 |                                      256 |               4 |
++----------------+------------------------------------------+-----------------+
+```
+
 
 ## Federated Learning with 10k clients
 
-As requested in the reviews, we further show Flower's scalability by training our network on the CIFAR10 dataset using **10 thousand** devices with **1 thousand** participating clients in each run. The Figures below show the accuracies and losses obtained after each trained round.
+We further show Flower's scalability by training on CIFAR10 dataset using **10 thousand** clients with **1 thousand** participating clients in each run for a few epochs. The Figures below show the accuracies and losses obtained after each trained round.
 
 ![image](media/flwr_cifar10_10k_accuracy.png)
 
 ![image](media/flwr_cifar10_10k_loss.png)
 
-Each round consisted of one epoch and *FedAvg* was used to generate the results.  
+Each round consisted of one epoch and about 90GB of data were transmitted during each round. *FedAvg* was used to generate the results.  
 
 
