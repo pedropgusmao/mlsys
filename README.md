@@ -1,6 +1,6 @@
 
 
-# MLSys'21 Additional Rebuttal Material (submisson #170)
+# MLSys'21 Additional Rebuttal Material (submission #170)
 
 We provide supplementary material that wouldn't be possible to include in the format used in the rebuttal document. The content here provided supports the claims made in the rebuttal addressing the points raised by reviewers.
 
