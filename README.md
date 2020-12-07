@@ -19,7 +19,7 @@ The figure above shows two FL experiments using two NVIDIA-Jetson devices as cli
 <<Takeaways from the figure>>
 
 
-## Federated Learning with 10k clients and 1k
+## Federated Learning with 10k clients
 
 As requested in the reviews, we further show Flower's scalability by training our network on the CIFAR10 dataset using **10 thousand** devices with **1 thousand** participating clients in each run. The Figures below show the accuracies and losses obtained after each trained round.
 
