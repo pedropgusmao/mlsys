@@ -18,23 +18,24 @@ The figure above shows two FL experiments using two NVIDIA-Jetson devices as cli
 
 
 ### High Power Consumption mode
+```
 +-------------------------+--------------------------------+---------------+
 |         Device          | Train time per epoch (s/epoch) | Avg.(s/epoch) |
 +-------------------------+--------------------------------+---------------+
 | Xavier-NX (15W-6cores)  | [191, 170, 168, 169, 171]      |         173.6 |
 | Jetson-TX2 (15W-6cores) | [274, 270, 271, 272, 270]      |         271.4 |
 +-------------------------+--------------------------------+---------------+
-
+```
 
 ### Low Power Consumption mode
+```
 +--------------------------+--------------------------------+---------------+
 |          Device          | train time per epoch (s/epoch) | Avg.(s/epoch) |
 +--------------------------+--------------------------------+---------------+
 | Xavier-NX (10W-4cores)   | [210, 203, 197, 201, 204]      |           203 |
 | Jetson-TX2 (7.5W-4cores) | [390, 380, 382, 377, 382]      |         382.2 |
 +--------------------------+--------------------------------+---------------+
-
->Add Takeaways from the figure
+```
 
 
 ## Federated Learning with 10k clients
