@@ -16,6 +16,24 @@ With Flower we can obtain metrics that wouldn't be possible to get from simulati
 
 The figure above shows two FL experiments using two NVIDIA-Jetson devices as clients. Both experiments train a ResNet18 on CIFAR-10 for 5 rounds. We run this experiment twice: first, using the high performance mode available on each device (see blue and oragne lines); and a lower power mode (purple and green lines). The power monitoring was done by running on a parallel process the `tegrastats` utility function available on these devices.
 
+
+### High Power Consumption mode
++-------------------------+--------------------------------+---------------+
+|         Device          | Train time per epoch (s/epoch) | Avg.(s/epoch) |
++-------------------------+--------------------------------+---------------+
+| Xavier-NX (15W-6cores)  | [191, 170, 168, 169, 171]      |         173.6 |
+| Jetson-TX2 (15W-6cores) | [274, 270, 271, 272, 270]      |         271.4 |
++-------------------------+--------------------------------+---------------+
+
+
+### Low Power Consumption mode
++--------------------------+--------------------------------+---------------+
+|          Device          | train time per epoch (s/epoch) | Avg.(s/epoch) |
++--------------------------+--------------------------------+---------------+
+| Xavier-NX (10W-4cores)   | [210, 203, 197, 201, 204]      |           203 |
+| Jetson-TX2 (7.5W-4cores) | [390, 380, 382, 377, 382]      |         382.2 |
++--------------------------+--------------------------------+---------------+
+
 >Add Takeaways from the figure
 
 
