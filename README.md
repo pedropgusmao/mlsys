@@ -13,6 +13,7 @@ With Flower we can obtain metrics that wouldn't be possible to get from simulati
 
 
 Anonymized link to Power Consumption and Timings (click to reveal the figure):
+<img src="https://user-images.githubusercontent.com/847743/101476321-7bf34800-3945-11eb-9650-c4060352c1a5.png">
 ![image](media/ResNet18_federated.png)
 
 Click on the link above (image) to see the two FL experiments we ran using two NVIDIA-Jetson devices as clients. Both experiments train a ResNet18 on CIFAR-10 for 5 rounds. We run this experiment twice: first, using the high performance mode available on each device (see blue and oragne lines); and a lower power mode (purple and green lines). The power monitoring was done by running on a parallel process the `tegrastats` utility function available on these devices.
