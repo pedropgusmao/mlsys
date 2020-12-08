@@ -64,7 +64,7 @@ We further show Flower's scalability by training on CIFAR10 dataset using **10 t
 
 Accuracy:
 
-<img src="https://user-images.githubusercontent.com/847743/101476644-019f8e80-3946-11eb-96ae-943a34e2b9fd.png">
+<img src="https://user-images.githubusercontent.com/847743/101476644-020f8e80-3946-11eb-96ae-943a34e2b9fd.png">
 
 Anonymized link to Flower Accuracy using 10K clients (click to reveal the figure): 
 ![image](media/flwr_cifar10_10k_accuracy.png) 
@@ -73,6 +73,7 @@ Anonymized link to Flower Accuracy using 10K clients (click to reveal the figure
 Loss:
 
 <img src="https://user-images.githubusercontent.com/847743/101476812-371be100-3946-11eb-8209-14d29a176dfc.png">
+
 Anonymized link to Flower Loss using 10K clients (click to reveal the figure): 
 ![image](media/flwr_cifar10_10k_loss.png)
 
