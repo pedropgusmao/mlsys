@@ -11,12 +11,12 @@ Flower enables deploying FL workloads on edge devices. Achieving this with other
 
 With Flower we can obtain metrics that wouldn't be possible to get from simulations alone. For instance, power consumption and accurate latency metrices at each node. 
 
+<img src="https://user-images.githubusercontent.com/847743/101476321-7bf34800-3945-11eb-9650-c4060352c1a5.png">
 
 Anonymized link to Power Consumption and Timings (click to reveal the figure):
-<img src="https://user-images.githubusercontent.com/847743/101476321-7bf34800-3945-11eb-9650-c4060352c1a5.png">
 ![image](media/ResNet18_federated.png)
 
-Click on the link above (image) to see the two FL experiments we ran using two NVIDIA-Jetson devices as clients. Both experiments train a ResNet18 on CIFAR-10 for 5 rounds. We run this experiment twice: first, using the high performance mode available on each device (see blue and oragne lines); and a lower power mode (purple and green lines). The power monitoring was done by running on a parallel process the `tegrastats` utility function available on these devices.
+The image above summarizes the two FL experiments we ran using two NVIDIA-Jetson devices as clients. Both experiments train a ResNet18 on CIFAR-10 for 5 rounds. We run this experiment twice: first, using the high performance mode available on each device (see blue and oragne lines); and a lower power mode (purple and green lines). The power monitoring was done by running on a parallel process the `tegrastats` utility function available on these devices.
 
 
 We report below the average time and total power consumption (on-device training+communication+aggregation) per round for each device in each power configuration.
@@ -62,9 +62,17 @@ This example shows Flower's capability of distinguishing between on-device compu
 
 We further show Flower's scalability by training on CIFAR10 dataset using **10 thousand** clients with **1 thousand** participating clients in each run for a few epochs. The Figures below show the accuracies and losses obtained after each trained round.
 
+Accuracy:
+
+<img src="https://user-images.githubusercontent.com/847743/101476644-019f8e80-3946-11eb-96ae-943a34e2b9fd.png">
+
 Anonymized link to Flower Accuracy using 10K clients (click to reveal the figure): 
 ![image](media/flwr_cifar10_10k_accuracy.png) 
 
+
+Loss:
+
+<img src="https://user-images.githubusercontent.com/847743/101476812-371be100-3946-11eb-8209-14d29a176dfc.png">
 Anonymized link to Flower Loss using 10K clients (click to reveal the figure): 
 ![image](media/flwr_cifar10_10k_loss.png)
 
