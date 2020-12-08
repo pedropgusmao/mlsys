@@ -11,6 +11,7 @@ Flower enables deploying FL workloads on edge devices. Achieving this with other
 
 With Flower we can obtain metrics that wouldn't be possible to get from simulations alone. For instance, power consumption and accurate latency metrices at each node. 
 
+<img src="media/ResNet18_federated.png">
 
 ![image](media/ResNet18_federated.png)
 
